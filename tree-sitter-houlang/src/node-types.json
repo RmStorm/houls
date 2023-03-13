@@ -1,0 +1,75 @@
+[
+  {
+    "type": "day_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "day",
+          "named": true
+        },
+        {
+          "type": "hour",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "week",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "week",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "day_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": " - ",
+    "named": false
+  },
+  {
+    "type": ": ",
+    "named": false
+  },
+  {
+    "type": "date",
+    "named": true
+  },
+  {
+    "type": "day",
+    "named": true
+  },
+  {
+    "type": "hour",
+    "named": true
+  }
+]

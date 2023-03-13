@@ -1,0 +1,77 @@
+{
+  "name": "houlang",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "week"
+      }
+    },
+    "week": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "date"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "day_line"
+          }
+        }
+      ]
+    },
+    "day_line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "day"
+        },
+        {
+          "type": "STRING",
+          "value": ": "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "hour"
+        },
+        {
+          "type": "STRING",
+          "value": " - "
+        },
+        {
+          "type": "SYMBOL",
+          "name": "hour"
+        }
+      ]
+    },
+    "day": {
+      "type": "PATTERN",
+      "value": "[a-z]+"
+    },
+    "hour": {
+      "type": "PATTERN",
+      "value": "\\d{1,2}:\\d{1,2}"
+    },
+    "date": {
+      "type": "PATTERN",
+      "value": "\\d+(-\\d+)+"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
